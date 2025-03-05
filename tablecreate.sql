@@ -44,11 +44,20 @@ DESCRIBE emp1287528;
 
 
 --Answer 2
-SELECT d.department_id,round(avg(e.salary)),MAX(e.salary)
-FROM employees e
-JOIN departments d on d.department_id=e.department_id
-GROUP BY department_id
-having MAX(e.salary);
+
+SELECT d.department_id,
+round(avg(e.salary)) 
+FROM employees e 
+JOIN departments d on e.department_id = d.department_id
+GROUP BY d.department_id
+having MAX(e.salary)>12000;
+
+select d.department_id,
+round(avg(e.salary)) as"Avg Salary"
+from employees e
+join departments d on e.department_id = d.department_id
+GROUP BY d.department_id
+HAVING MAX(e.salary)>12000;
 
 --Answer 3
 SELECT first_name
