@@ -113,7 +113,7 @@ SELECT  * FROM DEPARTMENTS
  ( SELECT DEPARTMENT_ID FROM EMPLOYEES WHERE
  FLOOR((SYSDATE-HIRE_DATE)/365) < 2 );
 --Question 67
---  67. Display details of current job for employees who
+--  67. Display details of current job for employees who worked as IT Programmers in the past
 --Answer 67
     
  SELECT * FROM employees
