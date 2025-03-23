@@ -44,3 +44,8 @@ FROM HR.EMPLOYEES e, HR.DEPARTMENTS d
 where department_name = 'Sales';
 
 
+SELECT round(avg(e.salary)),d.department_name
+FROM EMPLOYEES e join DEPARTMENTS d on d.department_id=e.department_id 
+where d.department_name = 'Sales'
+group by d.department_name;
+
